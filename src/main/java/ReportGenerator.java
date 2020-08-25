@@ -1,8 +1,11 @@
+import org.junit.platform.commons.util.StringUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class ReportGenerator implements PrimeNumberGenerator{
 
+    Menu menu = new Menu();
 
     public List<Integer> generate(int startNum, int endNum) {
         List<Integer> primeList = new ArrayList<Integer>();
@@ -39,15 +42,4 @@ public class ReportGenerator implements PrimeNumberGenerator{
         return true;
     }
 
-    public String createStringOfPrimeNumbers(List<Integer> listOfPrimeNums){
-
-        StringBuilder sb = new StringBuilder();
-
-        for (int i = 0; i < listOfPrimeNums.size(); i++){
-            sb.append(listOfPrimeNums.get(i));
-            sb.append("\n");
-        }
-
-        return sb.toString();
-    }
 }
