@@ -29,7 +29,6 @@ public class ReportGenerator implements PrimeNumberGenerator{
     }
 
 
-
     public boolean isPrime(int value) {
 
         for (int i = 2; i < value; i++) {
@@ -38,5 +37,17 @@ public class ReportGenerator implements PrimeNumberGenerator{
             }
         }
         return true;
+    }
+
+    public String createStringOfPrimeNumbers(List<Integer> listOfPrimeNums){
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < listOfPrimeNums.size(); i++){
+            sb.append(listOfPrimeNums.get(i));
+            sb.append("\n");
+        }
+
+        return sb.toString();
     }
 }

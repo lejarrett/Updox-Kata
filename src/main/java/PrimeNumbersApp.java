@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class PrimeNumbersApp {
 
     private Menu menu;
@@ -27,12 +29,12 @@ public class PrimeNumbersApp {
 
     public void run (int startNum, int endNum){
 
+        ReportGenerator reportGenerator = new ReportGenerator();
 
+        List<Integer> primeNumbers = reportGenerator.generate(startNum, endNum);
 
-
-
-
-
+        menu.displayMessage("Found " + primeNumbers.size() + " prime numbers between " + startNum + " & " + endNum + ":");
+        menu.displayMessage(reportGenerator.createStringOfPrimeNumbers(primeNumbers));
 
     }
 }
